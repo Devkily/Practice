@@ -11,7 +11,7 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private Button _mainMenu;
     [SerializeField] private Player _player;
    
-    private CanvasGroup _gameOverGroup;
+    //private CanvasGroup _gameOverGroup;
 
     private void OnEnable()
     {
@@ -27,11 +27,11 @@ public class GameOverScreen : MonoBehaviour
         _mainMenu.onClick.RemoveListener(OnMainMenu);
     }
 
-    private void Start()
-    {
-        _gameOverGroup = GetComponent<CanvasGroup>();
-        //_gameOverGroup.alpha = 0;
-    }
+    //private void Start()
+    //{
+    //    _gameOverGroup = GetComponent<CanvasGroup>();
+    //    //_gameOverGroup.alpha = 0;
+    //}
     private void OnDied()
     {
         //_gameOverGroup.alpha = 1;
@@ -42,10 +42,11 @@ public class GameOverScreen : MonoBehaviour
     {
         Time.timeScale = 1;
         gameObject.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     private void OnMainMenu()
     {
-
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }

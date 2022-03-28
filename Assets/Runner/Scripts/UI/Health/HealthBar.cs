@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour
+public class HealthBarUISA : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private Heart _heartTemplate;
