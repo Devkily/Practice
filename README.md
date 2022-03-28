@@ -1,2 +1,2 @@
 # Practice
- Еhere are 3 projects here
+ There are 3 projects here
