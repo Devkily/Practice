@@ -4,9 +4,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HealthDisplay : MonoBehaviour
+public class HealthDisplayRN : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerRN _player;
     [SerializeField] private TMP_Text _healthUI;
 
     private void OnEnable()

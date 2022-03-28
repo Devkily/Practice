@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementRN : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _stepSize;

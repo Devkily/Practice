@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(PlayerMovement))]
-public class PlayerInput : MonoBehaviour
+[RequireComponent(typeof(PlayerMovementRN))]
+public class PlayerInputRN : MonoBehaviour
 {
-    private PlayerMovement _movement;
+    private PlayerMovementRN _movement;
 
     private void Start()
     {
-        _movement = GetComponent<PlayerMovement>();
+        _movement = GetComponent<PlayerMovementRN>();
     }
     private void Update()
     {

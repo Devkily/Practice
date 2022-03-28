@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof (CanvasGroup))]
-public class GameOverScreen : MonoBehaviour
+public class GameOverScreenRN : MonoBehaviour
 {
     [SerializeField] private Button _restart;
     [SerializeField] private Button _mainMenu;
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerRN _player;
    
     //private CanvasGroup _gameOverGroup;
 

@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyRN : MonoBehaviour
 {
     [SerializeField] private int _damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Player player))
+        if (collision.TryGetComponent(out PlayerRN player))
         {
             player.ApplyDamage(_damage);
         }
         else
         {
-            ScoreManager.score += 10;
+            ScoreManagerRN.scoreRN += 10;
         }
         Die();
     }

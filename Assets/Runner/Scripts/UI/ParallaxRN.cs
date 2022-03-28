@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(RawImage))]
-public class Parallax : MonoBehaviour
+public class ParallaxRN : MonoBehaviour
 {
     [SerializeField] private float _speed;
     private RawImage _image;

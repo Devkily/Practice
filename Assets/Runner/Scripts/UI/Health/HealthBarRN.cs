@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBarUISA : MonoBehaviour
+public class HealthBarRN : MonoBehaviour
 {
-    [SerializeField] private Player _player;
-    [SerializeField] private Heart _heartTemplate;
+    [SerializeField] private PlayerRN _player;
+    [SerializeField] private HeartRN _heartTemplate;
 
-    private List<Heart> _hearts = new List<Heart>();
+    private List<HeartRN> _hearts = new List<HeartRN>();
 
     private void OnEnable()
     {
@@ -37,11 +37,11 @@ public class HealthBarUISA : MonoBehaviour
     }
     private void CreateHeart()
     {
-        Heart newHeart = Instantiate(_heartTemplate, transform);
-        _hearts.Add(newHeart.GetComponent<Heart>());
+        HeartRN newHeart = Instantiate(_heartTemplate, transform);
+        _hearts.Add(newHeart.GetComponent<HeartRN>());
         newHeart.ToFill();
     }
-    private void DestroyHeart(Heart heart)
+    private void DestroyHeart(HeartRN heart)
     {
         _hearts.Remove(heart);
         heart.ToEmpty();

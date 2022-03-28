@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : ObjectPool
+public class PipeSpawnerFB : ObjectPoolFB
 {
-    [SerializeField] private GameObject[] _enemyPrefabs;
+    [SerializeField] private GameObject[] _pipePrefabs;
     [SerializeField] private Transform[] _spawnPoints;
-    [SerializeField] private float _spawnSpeed;
+    [SerializeField] private float _minSpawnSpeed;
+    [SerializeField] private float _maxSpawnSpeed;
+    private float _spawnSpeed;
 
     private float _elapsedTime = 0;
     private void Start()
     {
-        Initialize(_enemyPrefabs);
+        Initialize(_pipePrefabs);
     }
     private void Update()
     {
@@ -19,11 +21,12 @@ public class EnemySpawner : ObjectPool
 
         if (_elapsedTime >= _spawnSpeed)
         {
-            if (TryGetObject(out GameObject enemy))
+            if (TryGetObject(out GameObject pipe))
             {
                 _elapsedTime = 0;
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length);
-                SetEnemy(enemy, _spawnPoints[spawnPointNumber].position);
+                _spawnSpeed = Random.Range(_minSpawnSpeed, _maxSpawnSpeed);
+                SetEnemy(pipe, _spawnPoints[spawnPointNumber].position);
             }
 
         }
@@ -34,3 +37,4 @@ public class EnemySpawner : ObjectPool
         enemy.transform.position = spawnPoint;
     }
 }
+
