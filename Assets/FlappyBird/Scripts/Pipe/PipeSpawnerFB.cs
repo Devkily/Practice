@@ -26,12 +26,12 @@ public class PipeSpawnerFB : ObjectPoolFB
                 _elapsedTime = 0;
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length);
                 _spawnSpeed = Random.Range(_minSpawnSpeed, _maxSpawnSpeed);
-                SetEnemy(pipe, _spawnPoints[spawnPointNumber].position);
+                SetPipe(pipe, _spawnPoints[spawnPointNumber].position);
             }
 
         }
     }
-    private void SetEnemy(GameObject enemy, Vector3 spawnPoint)
+    private void SetPipe(GameObject enemy, Vector3 spawnPoint)
     {
         enemy.SetActive(true);
         enemy.transform.position = spawnPoint;
