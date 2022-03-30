@@ -1,2 +1,3 @@
 # Practice
- There are 3 projects here
+ Путь к играм
+ Assets/Games
